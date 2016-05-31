@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="338.0000000000001" y="1288.0">BTTournaments.BTTournamentNet</node>
+    <node x="257.0000000000001" y="1447.0">BTTournaments.BTMatch</node>
+    <node x="934.0000000000002" y="1470.0">BTTournaments.BTPlayer</node>
+    <node x="678.0000000000001" y="1559.0">BTTournaments.BTPlayersPair</node>
+    <node x="354.0000000000001" y="1806.9999999999998">BTGeneral.BTLComment</node>
+    <node x="1029.0000000000005" y="1773.0">BTTournaments.BTPlayerStatistics</node>
+    <node x="620.0000000000002" y="1770.0">BTTournaments.BTMatchStatistics</node>
+    <node x="30.682539682539343" y="1223.2936507936513">BTTournaments.BTTournament</node>
+    <node x="746.0000000000002" y="1839.0">BTGeneral.BTLUser</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="BTTournaments.BTMatch" target="BTTournaments.BTPlayersPair">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="BTTournaments.BTMatch" target="BTTournaments.BTTournament">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="BTGeneral.BTLComment" target="BTGeneral.BTLUser">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="BTTournaments.BTTournamentNet" target="BTTournaments.BTMatch">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="BTTournaments.BTPlayersPair" target="BTTournaments.BTPlayer">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="BTTournaments.BTMatch" target="BTGeneral.BTLComment">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="BTTournaments.BTTournament" target="BTTournaments.BTTournamentNet">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="BTTournaments.BTPlayer" target="BTTournaments.BTPlayerStatistics">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="BTTournaments.BTMatch" target="BTTournaments.BTMatchStatistics">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9999999999999997" x="620.0000000000002" y="1742.0" />
+  <SelectedNodes>
+    <node>BTGeneral.BTLUser</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
