@@ -1,5 +1,5 @@
 package BTTournaments; /**
- * Класс матч
+ * Класс матч 1
  */
 
 import BTGeneral.BTLComment;
