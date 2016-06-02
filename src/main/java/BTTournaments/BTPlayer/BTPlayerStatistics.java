@@ -1,4 +1,4 @@
-package BTTournaments;
+package BTTournaments.BTPlayer;
 
 /**
  * Класс статистики игрока
