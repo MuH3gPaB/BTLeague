@@ -10,6 +10,10 @@ import java.util.ArrayList;
 public class BTPlayerStoreSourceFile implements IBTPlayerStoreSource {
     private File file;
 
+    public boolean isEmpty(){
+        return file == null;
+    }
+
     BTPlayerStoreSourceFile(String fileName){
         file = new File(fileName);
     }

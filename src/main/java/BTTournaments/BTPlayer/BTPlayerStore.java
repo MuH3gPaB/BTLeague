@@ -1,6 +1,5 @@
 package BTTournaments.BTPlayer;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 /**
@@ -8,13 +7,23 @@ import java.util.ArrayList;
  */
 public class BTPlayerStore {
 
-    public static void saveBTPlayer(IBTPlayer btPlayer, IBTPlayerStoreSource source) {
-        if(source != null)
-            source.saveBTPlayer(btPlayer);
+    private IBTPlayerStoreSource source;
+
+    BTPlayerStore (IBTPlayerStoreSource source){
+        this.source = source;
     }
 
-    public IBTPlayer loadBTPlayer(int playerID, IBTPlayerStoreSource source, IBTPlayer player){
-        source.loadBTPlayer(playerID, player);
+    public void setSource(IBTPlayerStoreSource source){
+        this.source = source;
+    }
+
+    public void saveBTPlayer(IBTPlayer btPlayer) {
+        if(!this.source.isEmpty())
+            this.source.saveBTPlayer(btPlayer);
+    }
+
+    public IBTPlayer loadBTPlayer(int playerID, IBTPlayer player){
+        this.source.loadBTPlayer(playerID, player);
         return player;
     }
 
