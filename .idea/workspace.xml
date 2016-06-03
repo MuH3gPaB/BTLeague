@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fab0355-2ce0-427c-8a0e-3641e1a81f96" name="Default" comment="Package BTPlayer changed for SOLID principals">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayer/BTPlayerStore.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayer/BTPlayerStoreSourceFile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayer/IBTPlayer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayer/IBTPlayerStatistics.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayer/IBTPlayerStoreSource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayer/description.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/BTTournaments/BTPlayer/BTPlayerStoreSourceFileTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/BTTournaments/BTPlayer/BTPlayerTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BTLeagueDocs/.~lock.Общее описание проекта BTLeague.odt#" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayer.java" afterPath="$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayer/BTPlayer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayerStatistics.java" afterPath="$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayer/BTPlayerStatistics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+    <list default="true" id="9fab0355-2ce0-427c-8a0e-3641e1a81f96" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BTLeague.iml" afterPath="$PROJECT_DIR$/BTLeague.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayersPair.java" afterPath="$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayersPair.java" />
     </list>
     <ignored path="BTLeague.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BTPlayerStoreSourceFile.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BTPlayerStoreSourceFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayer/BTPlayerStoreSourceFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
+            <state relative-caret-position="306">
               <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -54,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BTPlayerStoreSourceFileTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BTPlayerStoreSourceFileTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/BTTournaments/BTPlayer/BTPlayerStoreSourceFileTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+            <state relative-caret-position="238">
+              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1074,11 +1060,18 @@
       <option name="presentableId" value="BTLeague-4" />
       <option name="project" value="BTLeague" />
       <option name="type" value="BUG" />
-      <updated>1464866667934</updated>
+      <updated>1464872887000</updated>
       <workItem from="1464866667964" duration="2731000" />
-      <workItem from="1464869680786" duration="10747000" />
+      <workItem from="1464869680786" duration="11986000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Package BTPlayer changed for SOLID principals">
+      <created>1464883218642</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1464883218642</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
     <servers>
@@ -1137,11 +1130,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23492000" />
+    <option name="totallyTimeSpent" value="24731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1385,24 +1378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BTTournaments/BTPlayer/BTPlayerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayer/IBTPlayerStatistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/io/FileReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1461,16 +1436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BTTournaments/BTPlayer/BTPlayerStoreSourceFileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayer/IBTPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1479,14 +1444,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayer/IBTPlayerStatistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BTTournaments/BTPlayer/BTPlayerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BTTournaments/BTPlayer/BTPlayerStoreSourceFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
+        <state relative-caret-position="306">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#267#268#0" expanded="true" />
             <element signature="e#308#309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BTTournaments/BTPlayer/BTPlayerStoreSourceFileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
