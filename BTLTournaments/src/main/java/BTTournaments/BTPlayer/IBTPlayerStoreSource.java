@@ -1,6 +1,5 @@
 package BTTournaments.BTPlayer;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 /**

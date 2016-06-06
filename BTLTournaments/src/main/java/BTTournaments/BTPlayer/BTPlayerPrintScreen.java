@@ -2,7 +2,6 @@ package BTTournaments.BTPlayer;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.lang.reflect.Type;
 
 /**
  * Класс для вывода на экран данных об игроке

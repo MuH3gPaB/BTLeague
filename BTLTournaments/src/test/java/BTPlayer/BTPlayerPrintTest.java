@@ -1,5 +1,6 @@
-package BTTournaments.BTPlayer;
+package BTPlayer;
 
+import BTTournaments.BTPlayer.*;
 import org.junit.Assert;
 import org.junit.Test;
 

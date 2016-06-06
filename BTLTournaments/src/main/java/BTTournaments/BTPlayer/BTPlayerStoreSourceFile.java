@@ -14,7 +14,7 @@ public class BTPlayerStoreSourceFile implements IBTPlayerStoreSource {
         return file == null;
     }
 
-    BTPlayerStoreSourceFile(String fileName){
+    public BTPlayerStoreSourceFile(String fileName){
         file = new File(fileName);
     }
 
@@ -39,6 +39,7 @@ public class BTPlayerStoreSourceFile implements IBTPlayerStoreSource {
                 BufferedReader br = new BufferedReader(fr);
                 player.setFirstName(br.readLine());
                 player.setLastName(br.readLine());
+                fr.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -47,7 +48,7 @@ public class BTPlayerStoreSourceFile implements IBTPlayerStoreSource {
 
     public ArrayList<IBTPlayer> loadAllBTPlayers(){
 
-        return new ArrayList<>();
+        return new ArrayList<IBTPlayer>();
     }
 
     public void updatePlayer(int playerID, IBTPlayer btPlayer){

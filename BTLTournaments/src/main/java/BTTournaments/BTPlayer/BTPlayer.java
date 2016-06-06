@@ -23,14 +23,21 @@ public class BTPlayer implements IBTPlayer {
 
 
     // Конструкторы
-    BTPlayer(String fstName, String lstName){
+    public BTPlayer(String fstName, String lstName){
         if(!fstName.isEmpty() && !lstName.isEmpty()) {
             this.firstName = fstName;
             this.lastName = lstName;
         }
     }
 
-    BTPlayer(){
+    public BTPlayer(String fstName){
+        if(!fstName.isEmpty()){
+            this.firstName=fstName;
+            this.lastName="";
+        }
+    }
+
+    public BTPlayer(){
 
     }
 
@@ -118,6 +125,10 @@ public class BTPlayer implements IBTPlayer {
 
     public int getPlayerID() {
         return playerID;
+    }
+
+    public void setPlayerID(int id) {
+        this.playerID = id;
     }
 
 

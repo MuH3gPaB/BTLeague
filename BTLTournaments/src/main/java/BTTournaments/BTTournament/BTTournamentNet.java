@@ -1,4 +1,6 @@
-package BTTournaments;
+package BTTournaments.BTTournament;
+
+import BTTournaments.BTMatch.BTMatch;
 
 import java.util.ArrayList;
 

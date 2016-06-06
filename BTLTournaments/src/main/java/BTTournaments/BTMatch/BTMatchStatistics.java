@@ -1,4 +1,4 @@
-package BTTournaments;
+package BTTournaments.BTMatch;
 
 /**
  * Класс статистика матча

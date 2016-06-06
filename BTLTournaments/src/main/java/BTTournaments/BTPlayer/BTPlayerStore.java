@@ -9,7 +9,7 @@ public class BTPlayerStore {
 
     private IBTPlayerStoreSource source;
 
-    BTPlayerStore (IBTPlayerStoreSource source){
+    public BTPlayerStore (IBTPlayerStoreSource source){
         this.source = source;
     }
 
