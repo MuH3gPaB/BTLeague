@@ -2,42 +2,52 @@ package BTTournaments.BTMatch;
 
 import BTTournaments.BTPlayer.IBTPlayer;
 
+import java.rmi.NoSuchObjectException;
+import java.util.ArrayList;
+
 /**
  * Класс определяющий пару (играющую единицу)
  * планируется использовать в построении турнирных сеток и расписания
  */
 
 
-public class BTPlayersPair implements IBTPlayersPair{
-    private IBTPlayer player1;
-    private IBTPlayer player2;
+public final class BTPlayersPair implements IBTPlayersUnit {
+    private static final int PAIR_UNIT_SIZE = 2;
+    private ArrayList<IBTPlayer> players;
     private int id;
 
-    public BTPlayersPair(IBTPlayer player1, IBTPlayer player2){
-        this.player1 = player1;
-        this.player2 = player2;
+    // Конструкторы
+    public BTPlayersPair(){
+        this.players = new ArrayList<>();
     }
 
-    public boolean equals(IBTPlayersPair pair){
-        return (this.player1 == pair.getPlayer1()) && (this.player2 == pair.getPlayer2());
+    // Methods
+
+    public void addPlayer(IBTPlayer player) throws IndexOutOfBoundsException{
+        if(player == null) return;
+        if(players.size() < PAIR_UNIT_SIZE) players.add(player);
+        else throw new IndexOutOfBoundsException();
     }
 
-    public IBTPlayer getPlayer1() {
-        return this.player1;
+    public void removePlayer(IBTPlayer player) throws NoSuchObjectException{
+        if(player == null) return;
+        if(players.contains(player)) players.remove(player);
+        else throw new NoSuchObjectException(player.toString());
     }
 
-    public IBTPlayer getPlayer2() {
-        return this.player2;
+    public ArrayList<IBTPlayer> getPlayers(){
+        if(this.players != null) return this.players;
+        else {
+            this.players = new ArrayList<>();
+            return this.players;
+        }
     }
 
-    public void setPlayer1(IBTPlayer player1) {
-        this.player1 = player1;
+    public boolean equals(IBTPlayersUnit players){
+        return (this.players.equals(players));
     }
 
-    public void setPlayer2(IBTPlayer player2) {
-        this.player2=player2;
-    }
-
+    // Getters and Setters
     public int getID() {
         return id;
     }

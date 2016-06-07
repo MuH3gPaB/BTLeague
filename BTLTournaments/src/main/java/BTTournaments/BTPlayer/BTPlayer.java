@@ -41,6 +41,25 @@ public class BTPlayer implements IBTPlayer {
 
     }
 
+    // Methods
+    @Override
+    public boolean equals(Object o){
+        if(o == null) return false;
+        if(o.getClass() != this.getClass()) return false;
+        if(o == this) return true;
+
+        BTPlayer player = (BTPlayer) o;
+        if((this.firstName == player.getFirstName()) &&
+                (this.lastName == player.getLastName()) &&
+                (this.playerID == player.getPlayerID())) return true;
+        else return false;
+    }
+
+    public int hashCode(){
+        //TODO: Реализовать!
+        return 1;
+    }
+
     // Добавление титула
     public void addTitle (String title){
         if(!title.isEmpty()) titls.add(title);
