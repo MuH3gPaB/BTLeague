@@ -36,10 +36,10 @@
     <% for (int i = 0; i < tournament.getPairs().size(); i++) {%>
     <tr>
         <td><%=i%></td>
-        <td><%=tournament.getPairs().get(i).getPlayer1().getFirstName()%></td>
-        <td><%=tournament.getPairs().get(i).getPlayer1().getLastName()%></td>
-        <td><%=tournament.getPairs().get(i).getPlayer2().getFirstName()%></td>
-        <td><%=tournament.getPairs().get(i).getPlayer2().getLastName()%></td>
+        <td><%=tournament.getPairs().get(i).getPlayers().get(0).getFirstName()%></td>
+        <td><%=tournament.getPairs().get(i).getPlayers().get(0).getLastName()%></td>
+        <td><%=tournament.getPairs().get(i).getPlayers().get(1).getFirstName()%></td>
+        <td><%=tournament.getPairs().get(i).getPlayers().get(1).getLastName()%></td>
     </tr>
     <%}%>
 

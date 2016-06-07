@@ -21,6 +21,13 @@ public final class BTPlayersPair implements IBTPlayersUnit {
         this.players = new ArrayList<>();
     }
 
+    // TODO: Доделать этот конструктор
+    public BTPlayersPair(IBTPlayer pl1, IBTPlayer pl2){
+        this.players = new ArrayList<>();
+        players.add(pl1);
+        players.add(pl2);
+    }
+
     // Methods
 
     public void addPlayer(IBTPlayer player) throws IndexOutOfBoundsException{
