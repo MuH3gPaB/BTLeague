@@ -1,14 +1,15 @@
 package PlayerEntity;
 
 import HibernateUtil.Dao;
+import org.hibernate.annotations.OptimisticLock;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name = "players")
+@DiscriminatorValue("RatedPlayer")
 public class StdPlayer extends Player{
 
     @Column

@@ -1,13 +1,16 @@
 package PlayerEntity;
 
 import Interfaces.IPlayer;
-
-
 import javax.persistence.*;
-import java.util.ArrayList;
 
-@MappedSuperclass
-public abstract class Player implements IPlayer {
+
+
+@Entity
+@Table(name = "players")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "pl_type")
+@DiscriminatorValue("BasePlayerClass")
+public class Player implements IPlayer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -137,4 +140,5 @@ public abstract class Player implements IPlayer {
     public void setSex(Sex sex) {
         this.sex = sex;
     }
+
 }

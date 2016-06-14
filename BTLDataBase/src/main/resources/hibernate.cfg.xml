@@ -13,6 +13,9 @@
         <!-- <property name="hbm2ddl.auto">update</property> -->
         <mapping class="PlayerEntity.Player"/>
         <mapping class="PlayerEntity.StdPlayer"/>
+        <mapping class="UnitsEntity.Unit"/>
+        <mapping class="UnitsEntity.PairUnit"/>
+        <mapping class="UnitsEntity.SingleUnit"/>
 
     </session-factory>
 </hibernate-configuration>
