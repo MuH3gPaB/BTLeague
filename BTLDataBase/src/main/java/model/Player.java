@@ -1,6 +1,5 @@
-package PlayerEntity;
+package model;
 
-import Interfaces.IPlayer;
 import javax.persistence.*;
 
 
@@ -10,11 +9,11 @@ import javax.persistence.*;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "pl_type")
 @DiscriminatorValue("BasePlayerClass")
-public class Player implements IPlayer {
+public class Player {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int player_ID;                       // ID
+    private long player_ID;                       // ID
 
     @Column
     private String firstName;                   // Имя
@@ -29,13 +28,14 @@ public class Player implements IPlayer {
     private int age;                            // Возраст
 
     @Column
-    private Sex sex;                            // Пол
+    private String sex;                            // Пол
 
     @Column
     private String country;                     // Страна
 
     @Column
     private String city;                        // Город
+
 
     // Конструкторы
     public Player(String fstName, String lstName){
@@ -77,11 +77,11 @@ public class Player implements IPlayer {
 
     // Getters & settelers
 
-    public int getPlayer_ID() {
+    public long getPlayer_ID() {
         return player_ID;
     }
 
-    public void setPlayer_ID(int player_ID) {
+    public void setPlayer_ID(long player_ID) {
         this.player_ID = player_ID;
     }
 
@@ -118,7 +118,7 @@ public class Player implements IPlayer {
     }
 
     public String getCity() {
-        return city;
+        return (city == null) ? "" : city;
     }
 
     public void setCity(String city) {
@@ -133,11 +133,11 @@ public class Player implements IPlayer {
         return lastName;
     }
 
-    public Sex getSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(Sex sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
