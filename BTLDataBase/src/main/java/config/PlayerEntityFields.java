@@ -13,6 +13,16 @@ public class PlayerEntityFields {
         "Город"
 };
 
+    public static final String[] fieldsNames = {
+            "firstName",
+            "lastName",
+            "middleName",
+            "age",
+            "sex",
+            "country",
+            "city"
+    };
+
     public static final String[] getters = {
             "getFirstName",
             "getLastName",
@@ -21,5 +31,15 @@ public class PlayerEntityFields {
             "getSex",
             "getCountry",
             "getCity"
+    };
+
+    public static final String[] setters = {
+            "setFirstName",
+            "setLastName",
+            "setMiddleName",
+            "setAge",
+            "setSex",
+            "setCountry",
+            "setCity"
     };
 }

@@ -25,8 +25,6 @@
                     <a href="/showplayer?id=<%=pl.getPlayer_ID()%>" class="list-group-item list-group-item-success">
                         <%=pl.getFirstName()%>
                         <%=pl.getLastName()%>
-                        <%=pl.getCity()%>
-                        <%=pl.getAge()%>
                     </a>
                 <%}
             %>

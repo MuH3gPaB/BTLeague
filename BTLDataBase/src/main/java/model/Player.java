@@ -1,7 +1,12 @@
 package model;
 
-import javax.persistence.*;
+import config.PlayerEntityFields;
 
+import javax.persistence.*;
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 
 @Entity
@@ -73,6 +78,37 @@ public class Player {
     // TODO: Реализовать
     public int hashCode(){
         return 0;
+    }
+
+    // TODO: Вытащил метод из контроллера, хорошо бы рефакторить под класс
+    public Map<String, String> getNotEmptyFieldsAsMap(){
+        Map<String, String> result = new HashMap<>();
+        for (int i = 0; i < PlayerEntityFields.fields.length; i++) {
+            String fieldValue;
+            String fieldName = PlayerEntityFields.fields[i];
+            try {
+                fieldValue = this.getClass()
+                        .getMethod(PlayerEntityFields.getters[i])
+                        .invoke(this, null)
+                        .toString();
+            }catch (NullPointerException e){
+                fieldValue = "";
+            }catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+                fieldName = "";
+                fieldValue = "";
+            }
+            result.put(fieldName, fieldValue);
+        }
+
+        Iterator<Map.Entry<String, String>> iterator = result.entrySet().iterator();
+
+        while (iterator.hasNext()){
+            Map.Entry e = iterator.next();
+            if("".equals(e.getKey())
+                    || "".equals(e.getValue())
+                    || "0".equals(e.getValue())) iterator.remove();
+        }
+        return result;
     }
 
     // Getters & settelers
