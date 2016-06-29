@@ -9,6 +9,43 @@
 <html>
 <head>
     <title>Edit player</title>
+
+    <script type="text/javascript" src="/static/resources/scripts/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript">
+
+        var fields = {};
+
+        function savePlayer(data) {
+            if(<%=request.getSession().getAttribute("id")%> == null)
+            {
+                if(data == "false"){
+                    $.get("/saveplayer",fields, function (data, status) {
+                        alert(data);
+                        window.location = "/players";
+                    });
+                } else{
+                    alert("User already exist!");
+                }
+            } else {
+                $.get("/saveplayer",fields, function (data, status) {
+                    alert(data);
+                    window.location = "/players";
+                });
+            }
+        }
+
+        function checkExist(){
+
+            <%
+            for(int i = 0; i < PlayerEntityFields.fieldsNames.length; i++){%>
+                fields[<%=i%>] = $("[name = <%=PlayerEntityFields.fieldsNames[i]%>]").val();
+            <%}
+            %>
+            $.get("/checkexist",fields,savePlayer);
+        }
+
+    </script>
+
 </head>
 
 
@@ -44,7 +81,7 @@
 <div id = "right_side">
     <div style="width: 100%" class="btn-group-vertical" role="group" aria-label="...">
             <button style="width: inherit"
-                    type="submit" value="save"
+                    type="button" value="save" onclick="checkExist()"
                     class="btn btn-default" form="edit_player_form">Сохранить</button>
             <button style="width: inherit"
                     type="button" value="back"

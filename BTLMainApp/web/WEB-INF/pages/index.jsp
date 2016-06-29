@@ -6,7 +6,6 @@
     ArrayList<Player> players = (ArrayList<Player>) request.getAttribute("players");
 %>
 
-
 <html>
 <head>
     <title>Welcome to BTLeague</title>
@@ -35,12 +34,6 @@
 
     <div id = "bottom">
         Im bottom
-    </div>
-
-    <div class="jumbotron">
-        <h1>Hello, world!</h1>
-        <p>...</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
     </div>
 
 </body>
