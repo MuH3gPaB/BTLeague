@@ -30,7 +30,7 @@ public class Player {
     private String middleName;                  // Отчество
 
     @Column
-    private int age;                            // Возраст
+    private int age = 0;                            // Возраст
 
     @Column
     private String sex;                            // Пол
@@ -40,6 +40,9 @@ public class Player {
 
     @Column
     private String city;                        // Город
+
+    @Column
+    private int itfRate = 0;
 
 
     // Конструкторы
@@ -83,12 +86,12 @@ public class Player {
     // TODO: Вытащил метод из контроллера, хорошо бы рефакторить под класс
     public Map<String, String> getNotEmptyFieldsAsMap(){
         Map<String, String> result = new HashMap<>();
-        for (int i = 0; i < PlayerEntityFields.fields.length; i++) {
+        for (int i = 0; i < PlayerEntityFields.FIELDS.length; i++) {
             String fieldValue;
-            String fieldName = PlayerEntityFields.fields[i];
+            String fieldName = PlayerEntityFields.FIELDS[i];
             try {
                 fieldValue = this.getClass()
-                        .getMethod(PlayerEntityFields.getters[i])
+                        .getMethod(PlayerEntityFields.GETTERS[i])
                         .invoke(this, null)
                         .toString();
             }catch (NullPointerException e){
@@ -177,4 +180,11 @@ public class Player {
         this.sex = sex;
     }
 
+    public int getItfRate() {
+        return itfRate;
+    }
+
+    public void setItfRate(int itfRate) {
+        this.itfRate = itfRate;
+    }
 }

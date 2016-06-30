@@ -6,11 +6,20 @@ import java.lang.reflect.Method;
 import java.util.Map;
 import java.util.Objects;
 
-// Класс для обработки данных, поступивших из формы
-// на вход получает карту значений <имя поля, значение (String)> и класс в который записываться данные
-// названия полей класса должны быть с маленькой буквы firstName!
+/** Класс для обработки данных, поступивших из формы*/
+
+//TODO: Переписать метод под идею с конфигурационным файлом
 
 public class EntityFactory {
+
+    /** Создание объектов игроков из входных данных и класса выходного объекта
+     *
+     * @param values карта значений (имя поля с маленькой буквы!(String), значение (String))
+     * @param playerClass класс в который записываться данные
+     * @return заполненный объект типа playerClass
+     *
+     * Метод будет выбрасывать исключения. Пока не реализовано.
+     */
 
     public static Object createPlayer(Map<String, String> values, Class playerClass){
         Object result = null;

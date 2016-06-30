@@ -4,7 +4,6 @@ import config.PlayerEntityFields;
 import instruments.EntityFactory;
 import instruments.PlayerComparator;
 import model.Player;
-import org.hibernate.annotations.SourceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -55,8 +54,8 @@ public class MainAppController {
     private String savePlayer(HttpServletRequest request){
         // TODO: Здесь, когда будут разные классы игроков нужно будет установить определение конкретного класса
         Map<String, String> fields = new HashMap<>();
-        for (int i = 0; i < PlayerEntityFields.fields.length; i++) {
-            fields.put(PlayerEntityFields.fieldsNames[i], request.getParameter(String.valueOf(i)));
+        for (int i = 0; i < PlayerEntityFields.FIELDS.length; i++) {
+            fields.put(PlayerEntityFields.FIELDS_NAMES[i], request.getParameter(String.valueOf(i)));
         }
 
         Player player = (Player) EntityFactory.createPlayer(fields, Player.class);
@@ -104,8 +103,8 @@ public class MainAppController {
     @ResponseBody
     public String checkExist(HttpServletRequest request){
         Map<String, String> fields = new HashMap<>();
-        for (int i = 0; i < PlayerEntityFields.fields.length; i++) {
-            fields.put(PlayerEntityFields.fieldsNames[i], request.getParameter(String.valueOf(i)));
+        for (int i = 0; i < PlayerEntityFields.FIELDS.length; i++) {
+            fields.put(PlayerEntityFields.FIELDS_NAMES[i], request.getParameter(String.valueOf(i)));
         }
         return String.valueOf(checkExistByRepository(fields));
     }

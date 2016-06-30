@@ -37,8 +37,8 @@
         function checkExist(){
 
             <%
-            for(int i = 0; i < PlayerEntityFields.fieldsNames.length; i++){%>
-                fields[<%=i%>] = $("[name = <%=PlayerEntityFields.fieldsNames[i]%>]").val();
+            for(int i = 0; i < PlayerEntityFields.FIELDS_NAMES.length; i++){%>
+                fields[<%=i%>] = $("[name = <%=PlayerEntityFields.FIELDS_NAMES[i]%>]").val();
             <%}
             %>
             $.get("/checkexist",fields,savePlayer);
@@ -59,17 +59,17 @@
     <ul class="list-group">
         <form name="edit_player_form" id="edit_player_form" action="/saveplayer">
             <%
-                for (int i = 0; i < PlayerEntityFields.fields.length; i++) {%>
+                for (int i = 0; i < PlayerEntityFields.FIELDS.length; i++) {%>
             <li class="list-group-item list-group-item-success">
-                <%=PlayerEntityFields.fields[i]%>
+                <%=PlayerEntityFields.FIELDS[i]%>
                 <%if((fields != null) &&
-                        (fields.get(PlayerEntityFields.fields[i]) != null)){%>
-                <input type="text" name="<%=PlayerEntityFields.fieldsNames[i]%>"
-                                  value="<%=fields.get(PlayerEntityFields.fields[i])%>"/>
+                        (fields.get(PlayerEntityFields.FIELDS[i]) != null)){%>
+                <input type="text" name="<%=PlayerEntityFields.FIELDS_NAMES[i]%>"
+                                  value="<%=fields.get(PlayerEntityFields.FIELDS[i])%>"/>
 
                 <%}
                 else { %>
-                <input type="text" name="<%=PlayerEntityFields.fieldsNames[i]%>"/>
+                <input type="text" name="<%=PlayerEntityFields.FIELDS_NAMES[i]%>"/>
                 <%}%>
             </li>
             <%}
